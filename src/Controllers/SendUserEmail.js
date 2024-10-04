@@ -19,14 +19,18 @@ const sendUserEmail_with_Attachment = async (req, res) => {
     const emailContent = `
       <div style="font-family: Arial, sans-serif; background-color: #f4f4f4;">
         <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-          <h2 style="color: #333333; text-align: center;">Application for ${heading}</h2>
+          <h2 style="color: #333333; text-align: center;">Application for ${
+            heading ? heading : "Web Developer and Native App Developer"
+          } </h2>
           
           <p style="color: #555555; line-height: 1.6;">
             <strong>Dear HR Manager,</strong>
           </p>
 
           <p style="color: #555555; line-height: 1.6;">
-            I hope this email finds you well. My name is <strong>${name}</strong>, and I am writing to express my interest in the ${heading}
+            I hope this email finds you well. My name is <strong>${name}</strong>, and I am writing to express my interest in the ${
+      heading ? heading : "Web Developer and Native App Developer"
+    }
             ${
               companyName ? `at <strong>${companyName}</strong>` : ""
             }. I have attached my resume for your consideration.

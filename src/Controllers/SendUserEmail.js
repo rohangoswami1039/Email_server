@@ -26,7 +26,7 @@ const sendUserEmail_with_Attachment = async (req, res) => {
           </p>
 
           <p style="color: #555555; line-height: 1.6;">
-            I hope this email finds you well. My name is <strong>${name}</strong>, and I am writing to express my interest in the React Native Developer position
+            I hope this email finds you well. My name is <strong>${name}</strong>, and I am writing to express my interest in the ${heading}
             ${
               companyName ? `at <strong>${companyName}</strong>` : ""
             }. I have attached my resume for your consideration.
